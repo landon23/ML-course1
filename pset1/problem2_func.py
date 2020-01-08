@@ -4,7 +4,12 @@ from scipy.spatial.distance import cdist
 from scipy.stats import mode
 import math
 
+
 def load_digits(N_samp,N_test,digit_list):
+    #This function loads grey-scale images of handwritten digits from the mnist_all.mat file.  It outputs train and
+    # test data matrices x_train and x_test of size Samples x Features.
+    #If N_test = 0, then it returns all of the test data.
+
     mat = scipy.io.loadmat('mnist_all.mat')
 
     mat_l = [mat['train' + str(num)][0:N_samp, :] for num in digit_list]
@@ -26,6 +31,9 @@ def load_digits(N_samp,N_test,digit_list):
     return [x_train, y_train, x_test, y_test]
 
 def classify(x_train, y_train, x, K):
+    # takes training data x_train, y_train and classifies test data x using K-NN.
+
+    #Finds pairwise distance matrix, then the K closest training examples to each data point in x and outputs the most common label.
     dist = cdist(x, x_train)
     xx = np.argpartition(dist, K, axis=1)
     labels = y_train.flatten()[xx[:, 0:K]]

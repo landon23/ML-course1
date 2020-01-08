@@ -3,6 +3,8 @@ import scipy.io
 from scipy.spatial.distance import cdist
 from scipy.stats import mode
 import math
+from matplotlib import pyplot as plt
+
 
 
 def load_digits(N_samp,N_test,digit_list):
@@ -46,6 +48,9 @@ def accuracy(y_test,y):
     return (np.sum(true) / len(true))
 
 def cross_valid_acc(x,y,folds,K):
+    # Cross-validation using k-NN.
+    #Takes as input training data x, y.  Splits it into N blocks, and uses each block as training data to classify the other N-1 blocks.  Here N=Folds.
+    #Returns the mean accuracy.
     per = np.random.permutation(x.shape[0])
     block = math.floor(x.shape[0]/folds)
     acc = np.zeros(folds)
@@ -62,6 +67,14 @@ def cross_valid_acc(x,y,folds,K):
         acc[i] = accuracy(y_test,yy)
 
     return np.mean(acc)
+
+
+def plot(x):
+    #Function for plotting grey-scale handwritten digits.
+    e = np.array([1, 1, 1])
+    pic = np.tensordot(x.reshape([28, 28]), e, axes=0)
+    plt.imshow(255 - pic)
+    plt.show()
 
 
 

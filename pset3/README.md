@@ -1,4 +1,4 @@
-This problem set uses a Gaussian classifier for possibly multi-class classification problems.  The classifier fits for each class, the sample mean and sample variance for each feature independently, and uses this for prediction.
+This problem set uses a Gaussian classifier for possibly multi-class classification problems.  The classifier fits for each class, the sample mean and sample variance for each feature independently, and uses this for prediction.  Additionally a simple function is implemented to plot ROC curves for binary classification problems.
 
 The two datasets considered are the MNIST dataset for digit classification as well as a simulated dataset modelling observations done by a telescope detecting high energy particles.
 

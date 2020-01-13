@@ -200,5 +200,5 @@ def validationPlot(optR, classifier, logAlpha, title):
 
 class optR:
     def __init__(self, fun, x):
-        self.fun = 0.0
-        self.x = 0.0
+        self.fun = fun
+        self.x = x

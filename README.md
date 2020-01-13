@@ -10,5 +10,6 @@ Here is a summary of each of the problem sets:
 
 Pset 1:  k-Nearest neighbor for classification of handwritten digits using a subset of the MNIST database.  
 Pset 2: Naive Bayes/Bag-of-words classifier for spam email detection using Enron email database.  
-Pset 3: Classification for continuous data using a Gaussian classifier; ROC curves
-Pset 4: 
+Pset 3: Classification for continuous data using a Gaussian classifier; ROC curves . 
+Pset 4: Linear regression using a polynomial basis and radial basis functions of varying degrees.  
+

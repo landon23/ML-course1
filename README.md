@@ -14,5 +14,6 @@ Pset 3: Classification for continuous data using a Gaussian classifier; ROC curv
 Pset 4: Linear regression using a polynomial basis and radial basis functions of varying degrees; investigating overfitting, etc.   
 Pset 5: Logistic regression for classification; comparison of logistic and linear regression for classification on toy data sets.     
 Pset 6: Effects of L2 and L1 regularization on logistic regression for sparse datasets.  Stochastic gradient descent.    
-Pset 7: Two layer neural nets and Gaussian process classifiers.
+Pset 7: Two layer neural nets and Gaussian process classifiers.    
+Pset 8: Clustering using K-means on the MNIST dataset. Bernoulli mixture model using EM algorithm, trained on a dataset of words and binary features.
 
